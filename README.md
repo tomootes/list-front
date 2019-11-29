@@ -20,3 +20,8 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+# Inspiration
+https://www.awwwards.com/websites/retro/
+
+# pm2 start npm --name "nuxt" -- start

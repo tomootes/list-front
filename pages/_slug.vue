@@ -21,11 +21,9 @@
     <iframe class="content__video" :src="`https://youtube.com/embed/${song.youtubeID}`" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen v-if="song.youtubeID"></iframe>
 
     <!-- {{ song }} -->
-    <div
-      class="content__text"
-      v-html=song.text
-    >
-
+    <div class="content__song" v-if="song.text">
+      <!-- <div class="content__song__bg"></div> -->
+      <textarea name="" class="content__song__text" id="" cols="30" rows="10" v-html=song.text></textarea>
     </div>
   </div>
 </template>
