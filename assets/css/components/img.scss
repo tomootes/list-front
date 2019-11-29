@@ -1,0 +1,12 @@
+.img{
+    display: flex;
+
+    &--full{
+        width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+        }
+    }
+
+}
