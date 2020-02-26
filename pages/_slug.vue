@@ -1,30 +1,25 @@
 <template>
   <div class="content">
     <div class="content__banner img img--full" v-if="song.banner">
-      <img
-        :src="`${this.$axios.defaults.baseURL}/${song.banner.url}`"
-        alt=""
-      >
+      <img :src="`${this.$axios.defaults.baseURL}/${song.banner.url}`" alt="">
     </div>
-    <h1 class="content__title" v-if="song.title">{{ song.title }} [{{song.creationDate}}] </h1>
-    <!-- {{ song }} -->
-    <audio class="content__audio" controls v-if="song.file">
-      <source
-        :src="`${this.$axios.defaults.baseURL}/${song.file.url}`"
-        type="audio/wav"
-      >
-      Your browser does not support the audio tag.
-    </audio>
-
-  <h1>{{ song.youtubeID }} </h1>
-
+    <h1 class="content__title" :class="{ 'content__title--turquoise': song.youtubeID }" v-if="song.title">{{ song.title }} [{{song.creationDate}}] </h1>
     <iframe class="content__video" :src="`https://youtube.com/embed/${song.youtubeID}`" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen v-if="song.youtubeID"></iframe>
 
-    <!-- {{ song }} -->
-    <div class="content__song" v-if="song.text">
-      <!-- <div class="content__song__bg"></div> -->
-      <textarea name="" class="content__song__text" id="" cols="30" rows="10" v-html=song.text></textarea>
+    <div class="content__song" :class="{ 'content__song--middle': song.youtubeID }" v-if="song.text">
+      <textarea name="" class="content__song__text" v-html=song.text></textarea>
     </div>
+
+    <div class="player" v-if="song.file">
+      <audio controls>
+        <source :src="`${this.$axios.defaults.baseURL}/${song.file.url}`"
+          type="audio/wav"
+        >
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+
+
   </div>
 </template>
 

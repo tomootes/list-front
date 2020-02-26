@@ -3,19 +3,23 @@
     background: white;
     width: 100vw;
     height: 100vh;
-    // transition: 1s all;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
+    transition: width 2s;
 
     ul {
         margin: 0;
         padding: 0;
         list-style: none;
-        font-size: 1rem;
+        font-size: .875rem;
         a{
             text-decoration: none;
+            &.hidden{
+                display: none;
+            }
         }
         li {
             padding: 0;
@@ -31,7 +35,7 @@
     &.small{
         // background: grey;
         border-right: 1px solid black;
-        width: 20vw;
+        width: 24vw;
     }
 
 }

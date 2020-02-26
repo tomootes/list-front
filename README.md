@@ -24,4 +24,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 # Inspiration
 https://www.awwwards.com/websites/retro/
 
-# pm2 start npm --name "nuxt" -- start
+pm2 start npm --name "nuxt" -- start
+
+git pull origin master && npm run build && pm2 start nuxt

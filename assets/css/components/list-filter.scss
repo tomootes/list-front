@@ -1,0 +1,17 @@
+.list-filter{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $gutter-md;
+    label{
+        cursor: pointer;
+    }
+    input{
+        margin: 0;
+    }
+    &__category{
+        &:first-child{
+            margin-right: $gutter-sm;
+
+        }
+    }
+}

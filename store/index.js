@@ -12,7 +12,12 @@ export const actions = {
     async nuxtServerInit(store, context) {
         try{
             const response = await context.$axios.get('songs')
-            store.commit('setSongs', response.data)
+            let songs = response.data;
+            songs = songs.sort(function(a,b){
+                return new Date(a.creationDate).getTime() - new Date(b.creationDate).getTime()
+            });
+            console.log(songs);
+            store.commit('setSongs', songs)
         }
         catch(err){
             context.error({

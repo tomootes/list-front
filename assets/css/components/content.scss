@@ -1,11 +1,16 @@
+$middle-width: 40rem;
+
 .content{
 
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 80vw;
-    margin-left: 20vw;
+    width: 76vw;
+    margin-left: 24vw;
     background: antiquewhite;
+    height: auto;
+    padding-bottom: $gutter-md;
+    transition: width 2s;
 
     &__title{
         margin: $gutter-md;
@@ -15,18 +20,23 @@
         text-align: center;
         // mix-blend-mode: difference;
         z-index: 999;
+        &--turquoise{
+            color: turquoise;
+            font-weight: bolder;
+        }
     }
 
     &__video{
-        width: 900px;
+        width: 71rem;
         height: 700px;
+        margin: 0 auto;
     }
 
     &__banner{
-        margin: 0 $gutter-md $gutter-md $gutter-md;
+        // margin: 0 $gutter-md $gutter-md $gutter-md;
         // width: calc( 100% - 2 * #{$gutter-md} );
         @media (min-width: $breakpoint-sm) {
-            margin: 0;
+            // margin: 0;
             position: absolute;
             top: 0;
             right: 0;
@@ -45,18 +55,19 @@
     }
 
     &__song{
-        margin: 0  $gutter-md  $gutter-md  $gutter-md;
-        margin: 0 2rem 2rem 2rem;
+
+        margin: $gutter-md  $gutter-md  $gutter-md  $gutter-md;
         white-space: pre;
         text-shadow: 1px 1px black;
         font-size: $font-size-md;
         display: flex;
-        width: 60rem;
-        // padding: $gutter-md;
+        width: $middle-width;
         z-index: 99;
         position: relative;
-        // mix-blend-mode: color-dodge;
 
+        &--middle{
+            margin: $gutter-md auto;
+        }
 
         &__bg{
             width: 100%;
@@ -71,15 +82,17 @@
         }
 
         &__text{
-            border: $gutter-md solid turquoise;
+            // border: $gutter-md solid turquoise;
+            margin: 0 0 8rem;
+            border: 1px solid white;
             mix-blend-mode: none;
             background: rgba(255,255,255,0.7);
             z-index: 99;
             isolation: isolate;
+            height: 900px;
         }
 
+
     }
-
-
 
 }
