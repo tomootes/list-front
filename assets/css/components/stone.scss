@@ -1,0 +1,30 @@
+.stone{
+
+    background: white;
+    z-index: 999;
+    position: fixed;
+    top: $gutter-sm;
+    left: $gutter-sm;
+    display: none;
+    padding: $gutter-sm;
+    width: 4rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: exclusion;
+
+    &.active{
+        display: flex;
+        @media (min-width: $breakpoint-sm) {
+            display: none;
+        }
+    }
+
+    &:hover,&:active{
+        mix-blend-mode: inherit;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        display: none;
+    }
+}

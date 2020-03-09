@@ -1,7 +1,5 @@
 # list-front
 
-> My excellent Nuxt.js project
-
 ## Build Setup
 
 ``` bash

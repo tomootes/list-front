@@ -5,12 +5,16 @@ $middle-width: 40rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 76vw;
-    margin-left: 24vw;
-    background: antiquewhite;
+    width: 100%;
+    background: lightseagreen;
     height: auto;
     padding-bottom: $gutter-md;
     transition: width 2s;
+
+    @media (min-width: $breakpoint-sm) {
+        width: 76vw;
+        margin-left: 24vw;
+    }
 
     &__title{
         margin: $gutter-md;
@@ -19,7 +23,7 @@ $middle-width: 40rem;
         // background: blue;
         text-align: center;
         // mix-blend-mode: difference;
-        z-index: 999;
+        z-index: 99;
         &--turquoise{
             color: turquoise;
             font-weight: bolder;
@@ -27,9 +31,16 @@ $middle-width: 40rem;
     }
 
     &__video{
-        width: 71rem;
-        height: 700px;
+
+        width: 100%;
+        height: 400px;
         margin: 0 auto;
+
+        @media (min-width: $breakpoint-sm) {
+            width: 71rem;
+            height: 700px;
+        }
+
     }
 
     &__banner{
@@ -56,14 +67,18 @@ $middle-width: 40rem;
 
     &__song{
 
-        margin: $gutter-md  $gutter-md  $gutter-md  $gutter-md;
         white-space: pre;
         text-shadow: 1px 1px black;
         font-size: $font-size-md;
         display: flex;
-        width: $middle-width;
+        width: 100%;
         z-index: 99;
         position: relative;
+
+        @media (min-width: $breakpoint-sm) {
+            margin: 0  $gutter-md  $gutter-md  $gutter-md;
+            width: $middle-width;
+        }
 
         &--middle{
             margin: $gutter-md auto;

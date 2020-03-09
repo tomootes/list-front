@@ -3,59 +3,64 @@
     class="list"
     :class="{ 'small': small }"
   >
-    <logo></logo>
-    <div class="list-filter">
-      <div class="list-filter__category">
-        <input
-          type="checkbox"
-          id="own-work"
-          v-model="ownWork"
-        >
-        <label for="own-work">Own work</label>
-      </div>
-      <div class="list-filter__category">
-        <input
-          type="checkbox"
-          id="covers"
-          v-model="cover"
-        >
-        <label for="covers">Covers</label>
-      </div>
+    <div class="list__panel">
+      <logo></logo>
+      <div class="list-filter">
+        <div class="list-filter__category">
+          <input
+            type="checkbox"
+            id="own-work"
+            v-model="ownWork"
+          >
+          <label for="own-work">Own work</label>
+        </div>
+        <div class="list-filter__category">
+          <input
+            type="checkbox"
+            id="covers"
+            v-model="cover"
+          >
+          <label for="covers">Covers</label>
+        </div>
 
+      </div>
+      <ul>
+        <li
+          v-for="song in songs"
+          :key=song.id
+        >
+          <nuxt-link
+            v-bind:class="toggleCategory(song)"
+            :to="'/' + song.id"
+          > {{ song.title }}</nuxt-link>
+        </li>
+      </ul>
     </div>
-    <ul>
-      <li
-        v-for="song in songs"
-        :key=song.id
-      >
-        <nuxt-link v-bind:class="classObject(song)" :to="'/' + song.id"> {{ song.title }}</nuxt-link>
-      </li>
-    </ul>
   </div>
+
 </template>
 <script>
 import logo from "~/components/logo.vue";
+import stone from "~/components/stone.vue";
 
 export default {
   components: {
-    logo
+    logo,
+    stone
   },
   data: function() {
     return {
       small: false,
       ownWork: true,
-      cover: true,
+      cover: true
     };
   },
   methods: {
-    classObject: function (song) {
-      console.log(song);
+    toggleCategory: function(song) {
       return {
-        'hidden' : ( !this[song.type]),
-        // 'hidden': this.ownWork,
-        // 'hidden': this.covers,
-      }
-    },
+        hidden: !this[song.type]
+      };
+    }
   },
   computed: {
     songs() {

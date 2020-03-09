@@ -1,18 +1,21 @@
 <template>
   <div class="page">
     <list></list>
+    <stone></stone>
     <nuxt />
   </div>
 </template>
 <script>
 import logo from '~/components/logo.vue'
 import list from '~/components/list.vue'
+import stone from '~/components/stone.vue'
 
 export default {
 
   components: {
     logo,
-    list
+    list,
+    stone
   },
   data: function() {
     return {
