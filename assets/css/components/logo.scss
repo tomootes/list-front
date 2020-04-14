@@ -1,8 +1,14 @@
 .logo{
-    position: absolute;
-    top: $gutter-md;
-    left: $gutter-md;
-    margin: 0;
+
+    margin: $gutter-md 0;
+
+    @media (min-width: $breakpoint-sm) {
+        margin: 0;
+        position: absolute;
+        top: $gutter-md;
+        left: $gutter-md;
+    }
+
     h1,h2,h3{
         margin: 0;
     }

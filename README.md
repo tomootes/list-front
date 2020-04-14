@@ -17,6 +17,9 @@ $ yarn start
 $ yarn generate
 ```
 
+# How to change the access the content type builder
+npm run develop
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 # Inspiration

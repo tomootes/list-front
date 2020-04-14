@@ -7,13 +7,14 @@ $middle-width: 40rem;
     flex-direction: column;
     width: 100%;
     background: lightseagreen;
-    height: auto;
+    min-height: 100vh;
     padding-bottom: $gutter-md;
     transition: width 2s;
 
+
     @media (min-width: $breakpoint-sm) {
-        width: 76vw;
-        margin-left: 24vw;
+        margin-left: 30%;
+        width: 70%;
     }
 
     &__title{
@@ -103,8 +104,8 @@ $middle-width: 40rem;
             mix-blend-mode: none;
             background: rgba(255,255,255,0.7);
             z-index: 99;
-            isolation: isolate;
-            height: 900px;
+
+            // height: 900px;
         }
 
 

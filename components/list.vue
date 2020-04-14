@@ -5,7 +5,7 @@
   >
     <div class="list__panel">
       <logo></logo>
-      <div class="list-filter">
+      <!-- <div class="list-filter">
         <div class="list-filter__category">
           <input
             type="checkbox"
@@ -22,19 +22,32 @@
           >
           <label for="covers">Covers</label>
         </div>
-
-      </div>
-      <ul>
+      </div> -->
+        <ul>
+        <h1>Own work</h1>
         <li
-          v-for="song in songs"
+          v-for="song in songs.ownWork"
           :key=song.id
         >
           <nuxt-link
-            v-bind:class="toggleCategory(song)"
+            :class="toggleCategory(song)"
             :to="'/' + song.id"
           > {{ song.title }}</nuxt-link>
         </li>
       </ul>
+      <ul>
+        <h1>Covers</h1>
+        <li
+          v-for="song in songs.cover"
+          :key=song.id
+        >
+          <nuxt-link
+            :class="toggleCategory(song)"
+            :to="'/' + song.id"
+          > {{ song.title }}</nuxt-link>
+        </li>
+      </ul>
+
     </div>
   </div>
 
@@ -58,7 +71,9 @@ export default {
   methods: {
     toggleCategory: function(song) {
       return {
-        hidden: !this[song.type]
+        hidden: !this[song.type],
+        cover: song.type === 'cover',
+        ownWork: song.type === 'ownWork',
       };
     }
   },

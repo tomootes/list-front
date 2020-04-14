@@ -1,7 +1,7 @@
 .list-filter{
     display: flex;
     flex-direction: row;
-    margin-bottom: $gutter-md;
+
     label{
         cursor: pointer;
     }
@@ -9,9 +9,19 @@
         margin: 0;
     }
     &__category{
+        font-size: $font-size-md;
         &:first-child{
             margin-right: $gutter-sm;
-
+            background: yellowgreen;
+        }
+        &:nth-child(2) {
+            background: lightsteelblue;
         }
     }
+
+    margin-bottom: $gutter-sm;
+    @media (min-width: $breakpoint-sm) {
+        margin-bottom: $gutter-md;
+    }
+
 }

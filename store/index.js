@@ -14,8 +14,14 @@ export const actions = {
             const response = await context.$axios.get('songs')
             let songs = response.data;
             songs = songs.sort(function(a,b){
-                return new Date(a.creationDate).getTime() - new Date(b.creationDate).getTime()
+                return new Date(b.creationDate).getTime() - new Date(a.creationDate).getTime()
             });
+            let property = 'type';
+            songs = songs.reduce(function(memo, x) {
+                if (!memo[x[property]]) { memo[x[property]] = []; }
+                memo[x[property]].push(x);
+                return memo;
+              }, {});
             console.log(songs);
             store.commit('setSongs', songs)
         }
