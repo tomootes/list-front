@@ -1,9 +1,10 @@
 .logo{
 
-    margin: $gutter-md 0;
+    margin: 0 auto $gutter-md;
+    font-size: $font-size-lg;
 
     @media (min-width: $breakpoint-sm) {
-        margin: 0;
+        margin: 0 auto;
         position: absolute;
         top: $gutter-md;
         left: $gutter-md;

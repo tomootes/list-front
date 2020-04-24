@@ -21,10 +21,9 @@ $middle-width: 40rem;
         margin: $gutter-md;
         color: white;
         text-shadow: 1px 1px black;
-        // background: blue;
         text-align: center;
-        // mix-blend-mode: difference;
         z-index: 99;
+        font-size: $font-size-md;
         &--turquoise{
             color: turquoise;
             font-weight: bolder;
@@ -38,7 +37,7 @@ $middle-width: 40rem;
         margin: 0 auto;
 
         @media (min-width: $breakpoint-sm) {
-            width: 71rem;
+            width: 85%;
             height: 700px;
         }
 

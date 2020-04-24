@@ -3,8 +3,9 @@
     class="list"
     :class="{ 'small': small }"
   >
+  <logo></logo>
     <div class="list__panel">
-      <logo></logo>
+
       <!-- <div class="list-filter">
         <div class="list-filter__category">
           <input
@@ -24,7 +25,7 @@
         </div>
       </div> -->
         <ul>
-        <h1>Own work</h1>
+        <h2>Own work</h2>
         <li
           v-for="song in songs.ownWork"
           :key=song.id
@@ -36,7 +37,7 @@
         </li>
       </ul>
       <ul>
-        <h1>Covers</h1>
+        <h2>Covers</h2>
         <li
           v-for="song in songs.cover"
           :key=song.id

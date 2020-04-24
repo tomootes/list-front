@@ -13,7 +13,7 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
-# generate static project
+# generate static wproject
 $ yarn generate
 ```
 
@@ -25,6 +25,13 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 # Inspiration
 https://www.awwwards.com/websites/retro/
 
+
+# How to bring stuff to server
+npm run build
+
+git add commit en alles
+
+## Op de de server
 pm2 start npm --name "nuxt" -- start
 
 git pull origin master && npm run build && pm2 start nuxt

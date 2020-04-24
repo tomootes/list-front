@@ -1,3 +1,3 @@
 <template>
-  <nuxt-link to="/"><h1 class="logo">Tom Ootes</h1></nuxt-link>
+  <nuxt-link to="/" class="logo">Tom Ootes</nuxt-link>
 </template>
