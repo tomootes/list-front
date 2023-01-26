@@ -1,16 +1,19 @@
 .logo{
 
-    margin: 0 auto $gutter-md;
-    font-size: $font-size-lg;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+    background-color: none !important;
+
+    img {
+        width: 100%;
+    }
 
     @media (min-width: $breakpoint-sm) {
-        margin: 0 auto;
-        position: absolute;
-        top: $gutter-md;
-        left: $gutter-md;
+        img {
+            width: 800px;
+        }
     }
 
-    h1,h2,h3{
-        margin: 0;
-    }
 }

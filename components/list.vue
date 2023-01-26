@@ -1,29 +1,9 @@
 <template>
   <div
     class="list"
-    :class="{ 'small': small }"
   >
-  <logo></logo>
-    <div class="list__panel">
 
-      <!-- <div class="list-filter">
-        <div class="list-filter__category">
-          <input
-            type="checkbox"
-            id="own-work"
-            v-model="ownWork"
-          >
-          <label for="own-work">Own work</label>
-        </div>
-        <div class="list-filter__category">
-          <input
-            type="checkbox"
-            id="covers"
-            v-model="cover"
-          >
-          <label for="covers">Covers</label>
-        </div>
-      </div> -->
+    <div class="list__panel">
         <ul>
         <h2>Own work</h2>
         <li
@@ -32,7 +12,7 @@
         >
           <nuxt-link
             :class="toggleCategory(song)"
-            :to="'/' + song.id"
+            :to="'/videos/' + song.id"
           > {{ song.title }}</nuxt-link>
         </li>
       </ul>
@@ -44,7 +24,7 @@
         >
           <nuxt-link
             :class="toggleCategory(song)"
-            :to="'/' + song.id"
+            :to="'/videos/' + song.id"
           > {{ song.title }}</nuxt-link>
         </li>
       </ul>
@@ -64,7 +44,6 @@ export default {
   },
   data: function() {
     return {
-      small: false,
       ownWork: true,
       cover: true
     };

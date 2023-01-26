@@ -1,5 +1,7 @@
 <template>
-  <div class="content">
+  <div>
+  <nuxt-link to="/videos" class="link">◄ TERUG NAAR VIDEOS</nuxt-link>
+  <div class="content">  
     <div class="content__banner img img--full" v-if="song.banner">
       <img :src="`${this.$axios.defaults.baseURL}/${song.banner.url}`" alt="">
     </div>
@@ -11,14 +13,16 @@
     </div>
 
     <div class="player" v-if="song.file">
-      <audio controls>
+      <div class="container">
+        <audio controls>
         <source :src="`${this.$axios.defaults.baseURL}/${song.file.url}`"
           type="audio/wav"
         >
         Your browser does not support the audio tag.
       </audio>
+      </div>
     </div>
-
+  </div>
   </div>
 </template>
 
@@ -55,3 +59,18 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+.link{
+
+  font-size: 1.25rem;
+  display: flex;
+  margin-bottom: 1rem;
+
+  @media (min-width: $breakpoint-sm) {
+    margin: 1.5rem;
+  display: flex;
+  font-size: 2rem;
+  }
+
+}
+</style>

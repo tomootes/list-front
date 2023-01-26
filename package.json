@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
-    "nuxt": "^2.11.0"
+    "bootstrap": "^5.2.3",
+    "nuxt": "^2.14.0"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0"
+    "@nuxtjs/style-resources": "^1.2.1",
+    "sass": "^1.57.1",
+    "sass-loader": "10"
   }
 }

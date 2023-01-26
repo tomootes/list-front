@@ -1,6 +1,7 @@
 
 export default {
   mode: 'universal',
+  target: 'static',
   /*
   ** Headers of the page
   */
@@ -26,6 +27,10 @@ export default {
     '@/assets/css/main.scss'
   ],
 
+  styleResources: {
+    scss: ['@/assets/css/*.scss']
+  },
+
   /*
   ** Plugins to load before mounting the App
   */
@@ -41,6 +46,7 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
   ],
 
   axios: {

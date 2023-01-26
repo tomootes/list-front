@@ -1,3 +1,5 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
 @import 'variables';
 
 @import 'components/list';
@@ -5,6 +7,7 @@
 @import 'components/page';
 @import 'components/img';
 @import 'components/input';
+@import 'components/header';
 @import 'components/stone';
 @import 'components/logo';
 @import 'components/player';
