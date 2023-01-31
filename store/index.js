@@ -22,7 +22,6 @@ export const actions = {
                 memo[x[property]].push(x);
                 return memo;
               }, {});
-            console.log(songs);
             store.commit('setSongs', songs)
         }
         catch(err){

@@ -48,7 +48,6 @@ export default {
     }
   },
   beforeRouteLeave (to, from, next) {
-    console.log(to);
     to !== '/' ? this.listActive = true : null;
   }
 
@@ -73,7 +72,7 @@ body{
         }
 }
 .page-footer{
-  background: orange;
+  background: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,5 +103,6 @@ body{
 h1{
     color: #1300ff;
     margin-bottom: 2rem;
+    font-weight: bolder;
   }
 </style>

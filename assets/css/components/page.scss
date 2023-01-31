@@ -1,4 +1,26 @@
 .page{
     display: flex;
     flex-direction: row;
+    .bijzonder{
+        padding: 1rem;
+        background-color: $yellow;
+        color: rgb(136, 36, 0);
+        font-weight: bolder;
+        font-size: 2rem;
+        margin-top: 2rem;
+        @media (min-width: $breakpoint-sm) {
+            margin-top: 0rem;
+        }
+      }
+      &__title{
+        margin-bottom: 2rem;
+        font-weight: bolder;
+      }
+      &__paragraph-highlighted{
+        margin-top: 0;
+        margin-bottom: 1rem;
+        background: rgba(255,255,255,1);
+        padding: 0.5rem;
+        margin-left: -0.5rem;
+      }
 }

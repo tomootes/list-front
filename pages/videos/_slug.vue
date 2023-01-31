@@ -42,9 +42,7 @@ export default {
   },
   computed: {
     numberLinesText () {
-      console.log(typeof this.song.text);
       let lines = this.song.text.split("\n");
-      console.log(lines);
       return lines.length;
     }
   },

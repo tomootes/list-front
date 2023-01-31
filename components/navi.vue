@@ -13,7 +13,7 @@
 }
 .nuxt-link-exact-active{
     font-weight: bolder;
-    color: darken(#0067ff, 20%);
+    color: darken($blue, 20%);
     background: antiquewhite;
 }
 nav {

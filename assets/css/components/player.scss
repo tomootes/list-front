@@ -12,13 +12,9 @@
     
     audio{
         width: 100%;
-        // width: calc(100% - 2* #{$gutter-sm});
     }
 
     @media (min-width: $breakpoint-sm) {
-        // width: 70%;
-        audio {
-            // width: 60%;
-        }
+        
     }
 }

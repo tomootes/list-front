@@ -1,6 +1,7 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import 'variables';
+@import 'colors';
 
 @import 'components/list';
 @import 'components/list-filter';
@@ -20,3 +21,6 @@ body, html{
 }
 
 
+a {
+    color: $blue;
+}

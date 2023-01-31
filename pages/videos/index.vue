@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Video's</h1>
+        <h1 class="page__title">Video's</h1>
         <list></list>
     </div>
 </template>

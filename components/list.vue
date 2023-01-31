@@ -71,7 +71,6 @@ export default {
   },
   watch: {
     $route(to, from) {
-      console.log(to);
       to.fullPath !== "/" ? (this.small = true) : (this.small = false);
     }
   }

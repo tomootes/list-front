@@ -1,6 +1,6 @@
 <template>
     <div >
-        <h1>Gigs</h1>
+        <h1 class="page__title">Gigs</h1>
         <table>
   <tr>
     <th>Venue</th>

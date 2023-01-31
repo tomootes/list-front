@@ -1,8 +1,8 @@
 <template>
 <div>
-  <h1>Songs</h1>
+  <h1 class="page__title">Songs</h1>
     <p>Wij verwachten lente 2023 ons eerste album hier te kunnen etaleren </p>
-    <p>Voor nu kan je jezelf opperbest vermaken met de aanwezige: <a href="/videos" class="bijzonder">videos</a></p>
+    <p>Voor nu kan je jezelf opperbest vermaken met de aanwezige: <a href="/videos" class="bijzonder btn btn-lg">videos</a></p>
 </div>
 </template>
     
@@ -23,11 +23,5 @@
     </script>
 
     <style>
-  .bijzonder{
-    padding: 1rem;
-    background-color: orange;
-    color: rgb(136, 36, 0);
-    font-weight: bolder;
-    font-size: 2rem;
-  }
+
   </style>
