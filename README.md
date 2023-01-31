@@ -33,11 +33,9 @@ npm run build
 
 git add commit en alles
 
-## Op de de server
+## PM2 Op de de server
 
-pm2 start npm --name "nuxt" -- start
-
-git pull origin master && npm run build && pm2 start nuxt
+https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment/optional-software/process-manager.html
 
 # index.vue Doctor
 
