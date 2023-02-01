@@ -8,6 +8,7 @@
         font-weight: bolder;
         font-size: 2rem;
         margin-top: 2rem;
+        border: 2px solid black;
         @media (min-width: $breakpoint-sm) {
             margin-top: 0rem;
         }
@@ -19,8 +20,13 @@
       &__paragraph-highlighted{
         margin-top: 0;
         margin-bottom: 1rem;
-        background: rgba(255,255,255,1);
-        padding: 0.5rem;
-        margin-left: -0.5rem;
+        background: rgba(255,255,255,.5);
+        padding: 1rem;
+        
+          @media (min-width: $breakpoint-sm) {
+            background: rgba(255,255,255,1);
+            margin-left: -0.5rem;
+            padding: 0.5rem;
+          }
       }
 }

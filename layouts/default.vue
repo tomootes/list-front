@@ -13,7 +13,8 @@
       <div class="page-footer">
 
         <div class="page-footer__follow">
-          <a target="_blank" href="https://www.instagram.com/ootes.band/">Volg ons: <img src="~/assets/img/instagram.svg" alt=""></a>
+          <a target="_blank" href="https://www.instagram.com/ootes.band/">Volg ons: <img
+              src="~/assets/img/instagram.svg" alt=""></a>
         </div>
         <!-- <div class="page-footer__under-construction">
           <img src="~/assets/img/under-construction.svg" alt="">
@@ -37,17 +38,17 @@ export default {
     list,
     stone
   },
-  data: function() {
+  data: function () {
     return {
       listActive: false
     };
   },
   computed: {
-    songs () {
+    songs() {
       return this.$store.state.songs
     }
   },
-  beforeRouteLeave (to, from, next) {
+  beforeRouteLeave(to, from, next) {
     to !== '/' ? this.listActive = true : null;
   }
 
@@ -57,52 +58,63 @@ export default {
 $blue: #0014C8;
 $lighter-blue: lighten($blue, 45%);
 
-body{
-    background-image:
-      radial-gradient(circle at center center, $lighter-blue, #ffffff),
-      repeating-radial-gradient(circle at center center, #FFF500, #ffffff, 10px, transparent 20px, transparent 10px);
-    background-blend-mode: multiply;
+body {
+  background-image:
+    radial-gradient(circle at center center, white, #ffffff),
+    repeating-radial-gradient(circle at center center, #FFF500, #ffffff, 10px, transparent 20px, transparent 10px);
+  background-blend-mode: multiply;
 }
-.page-content{
+
+.page-content {
   margin: 1rem 0 1.5rem;
   background-color: antiquewhite;
-  padding: 2rem;
+  padding: .75rem;
+
   @media (min-width: $breakpoint-sm) {
-    margin: 2rem 0 6rem;
-        }
+    margin: 2rem 0 4rem;
+    padding: 2rem;
+  }
 }
-.page-footer{
+
+.page-footer {
   background: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 6rem;
+
+  img {
+    width: 40px;
+  }
+
+  &__under-construction {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    img{
-      width: 40px;
+    padding: 1rem 1rem 0;
+    margin-bottom: 1rem;
+
+    img {
+      margin-right: 1rem;
     }
-    &__under-construction{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem 1rem 0;
-      margin-bottom: 1rem;
-      img{
-        margin-right: 1rem;
-      }
-      p {
-        margin: 0;  
-      }
+
+    p {
+      margin: 0;
     }
-    &__follow{
-      font-weight: bold;
-      font-size: 2rem;
-    }
-}
-h1{
-    color: #1300ff;
-    margin-bottom: 2rem;
-    font-weight: bolder;
   }
+
+  &__follow {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+h1 {
+  color: #1300ff;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
 </style>

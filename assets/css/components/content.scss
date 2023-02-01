@@ -5,20 +5,12 @@ $middle-width: 40rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    background: lightseagreen;
-    // min-height: 100vh;
+    background: lighten($blue, 20%);
     padding-bottom: $gutter-md;
     transition: width 2s;
-
     width: calc(100% + 4rem);
-
     margin-left: -2rem;
     margin-right: -2rem;
-
-    @media (min-width: $breakpoint-sm) {
-        // margin-left: 30%;
-        // width: 70%;
-    }
 
     &__title{
 
@@ -27,6 +19,7 @@ $middle-width: 40rem;
         text-align: center;
         z-index: 99;
         padding: .5rem;
+        font-size: $font-size-sm;
 
         &--turquoise{
             color: turquoise;
@@ -41,38 +34,26 @@ $middle-width: 40rem;
     }
 
     &__video{
-
         width: 100%;
         height: 220px;
         margin: 0 auto;
-
         @media (min-width: $breakpoint-sm) {
             width: 85%;
             height: 700px;
         }
-
     }
 
     &__banner{
-        // margin: 0 $gutter-md $gutter-md $gutter-md;
-        // width: calc( 100% - 2 * #{$gutter-md} );
         @media (min-width: $breakpoint-sm) {
-            // margin: 0;
             position: absolute;
             top: 0;
             right: 0;
-            // width: 50%;
         }
     }
 
     &__audio{
         margin: 0 auto  $gutter-md  auto;
         width: 35rem;
-        // mix-blend-mode: multiply;
-    }
-
-    &__song_bg{
-
     }
 
     &__song{

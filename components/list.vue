@@ -1,31 +1,25 @@
 <template>
-  <div
-    class="list"
-  >
-
-    <div class="list__panel">
-        <ul>
+  <div class="">
+    <div class="row">
+      <!-- {{ songs }} -->
+      <ul class="songs-list col-md-6">
         <h2>Own work</h2>
-        <li
-          v-for="song in songs.ownWork"
-          :key=song.id
-        >
-          <nuxt-link
-            :class="toggleCategory(song)"
-            :to="'/videos/' + song.id"
-          > {{ song.title }}</nuxt-link>
+        <li v-for="song in songs.ownWork" :key=song.id>
+          <nuxt-link :class="song.youtubeID ? 'p-bottom' : null" :to="'/videos/' + song.id">
+            {{ song.title }}
+            <img :src="'https://img.youtube.com/vi/' + song.youtubeID + '/hqdefault.jpg'" alt="VID"
+              v-if="song.youtubeID">
+            <!-- <img :src="`http://37.139.26.166:1337/${song.banner.url}`" alt="" v-else> -->
+          </nuxt-link>
         </li>
       </ul>
-      <ul>
+      <ul class="songs-list col-md-6">
         <h2>Covers</h2>
-        <li
-          v-for="song in songs.cover"
-          :key=song.id
-        >
-          <nuxt-link
-            :class="toggleCategory(song)"
-            :to="'/videos/' + song.id"
-          > {{ song.title }}</nuxt-link>
+        <li v-for="song in songs.cover" :key=song.id>
+          <nuxt-link :class="song.youtubeID ? 'p-bottom' : null" :to="'/videos/' + song.id"> {{ song.title }}
+            <img :src="'https://img.youtube.com/vi/' + song.youtubeID + '/hqdefault.jpg'" alt="VID"
+              v-if="song.youtubeID">
+          </nuxt-link>
         </li>
       </ul>
 
@@ -37,34 +31,36 @@
 import logo from "~/components/logo.vue";
 import stone from "~/components/stone.vue";
 
+import axios from "axios";
+
 export default {
   components: {
     logo,
     stone
   },
-  data: function() {
+  data: function () {
     return {
       ownWork: true,
       cover: true
     };
   },
   methods: {
-    toggleCategory: function(song) {
-      return {
-        hidden: !this[song.type],
-        cover: song.type === 'cover',
-        ownWork: song.type === 'ownWork',
-      };
-    }
+    // toggleCategory: function (song) {
+    //   return {
+    //     hidden: !this[song.type],
+    //     cover: song.type === 'cover',
+    //     ownWork: song.type === 'ownWork',
+    //   };
+    // }
   },
   computed: {
     songs() {
       return this.$store.state.songs;
     }
   },
-  mounted: function() {
+  mounted: function () {
     this.$route.fullPath !== "/" ? (this.small = true) : (this.small = false);
-    this.$nextTick(function() {
+    this.$nextTick(function () {
       // Code that will run only after the
       // entire view has been rendered
     });
@@ -76,3 +72,29 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+.songs-list {
+  a {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem 1.5rem;
+    margin-bottom: .5rem;
+    background-color: lighten($blue, 20%);
+    color: white;
+    font-weight: bolder;
+
+    img {
+      margin-top: 1rem;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+      &.p-bottom {
+        padding: 1rem 2.5rem 2.5rem;
+      }
+
+      margin-bottom: 1rem;
+      padding: 1rem 2.5rem;
+    }
+  }
+}
+</style>

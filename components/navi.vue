@@ -4,6 +4,7 @@
         <nuxt-link to="/gigs">[Gigs]</nuxt-link>
         <nuxt-link to="/songs">[Songs]</nuxt-link>
         <nuxt-link to="/videos">[Videos]</nuxt-link>
+        <nuxt-link to="/fotos">[Foto's]</nuxt-link>
         <nuxt-link to="/contact">[Contact]</nuxt-link>
     </nav>
 </template>  
