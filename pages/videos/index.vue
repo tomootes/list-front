@@ -8,12 +8,12 @@
 import list from '~/components/list.vue'
 export default {
     head() {
-    return {
-        title: 'my songs'
-    };
+        return {
+            title: 'Videos ~ Ootes Band'
+        };
     },
     components: {
-    list
+        list
     },
 }
 </script>

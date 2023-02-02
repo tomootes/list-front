@@ -12,12 +12,12 @@
 import list from '~/components/list.vue'
 export default {
     head() {
-    return {
-        title: 'my songs'
-    };
+        return {
+            title: 'Contact ~ Ootes Band'
+        };
     },
     components: {
-    list
+        list
     },
 }
 </script>

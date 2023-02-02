@@ -1,42 +1,42 @@
 <template>
-    <div >
-        <h1 class="page__title">Gigs</h1>
-        <table>
-  <tr>
-    <th>Venue</th>
-    <th>Plaats</th>
-    <th>Datum</th>
-  </tr>
-  <tr>
-    <td>Geen gigs gevonden</td>
-    <!-- <td>Maria Anders</td>
+  <div>
+    <h1 class="page__title">Gigs</h1>
+    <table>
+      <tr>
+        <th>Venue</th>
+        <th>Plaats</th>
+        <th>Datum</th>
+      </tr>
+      <tr>
+        <td>Geen gigs gevonden</td>
+        <!-- <td>Maria Anders</td>
     <td>Germany</td> -->
-  </tr>
-  <tr>
-    <!-- <td>Centro comercial Moctezuma</td>
+      </tr>
+      <tr>
+        <!-- <td>Centro comercial Moctezuma</td>
     <td>Francisco Chang</td>
     <td>Mexico</td> -->
-  </tr>
-</table>
+      </tr>
+    </table>
 
-    </div>
+  </div>
 </template>
 <script>
 import logo from '~/components/logo.vue'
 
 export default {
-    head() {
+  head() {
     return {
-        title: 'my songs'
+      title: 'Gigs ~ Ootes Band'
     };
-    },
-    components: {
+  },
+  components: {
     logo
-    },
+  },
 }
 </script>
 <style>
-table{
-    width: 100%;
+table {
+  width: 100%;
 }
 </style>

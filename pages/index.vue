@@ -10,7 +10,7 @@
       <div class="home__content">
         <h1 class="page__title mt-3">Over Ootes</h1>
         <p class="page__paragraph-highlighted">Dit Utrechtse Duo vaart voort op de grote levensvragen van vandaag;
-          hoe kunnen wij als mensen in symbiose leven met onze Aarde? Hoe en waar kunnen we elkaar weer vinden? </p>
+          hoe kunnen wij als mensen in symbiose leven met onze Aarde? Hoe en waar kunnen we elkaar vinden? </p>
         <p class="page__paragraph-highlighted">Met nog tien jaar om onze levenswijze collectief om te gooien vragen wij
           ons af, hoe kunnen we regeneratieve rituelen ontwikkelen voor een leefbare toekomst?
           Verwikkeld met technologieën maar geinspireerd door de natuur, vinden wij in muziek ons medium om in relatie
@@ -31,7 +31,7 @@ import logo from '~/components/logo.vue'
 export default {
   head() {
     return {
-      title: 'my songs'
+      title: 'Homepage ~ Ootes Band'
     };
   },
   components: {

@@ -3,7 +3,7 @@
     <div class="row">
       <!-- {{ songs }} -->
       <ul class="songs-list col-md-6">
-        <h2>Own work</h2>
+        <h2 class="text-center">Eigen werk</h2>
         <li v-for="song in songs.ownWork" :key=song.id>
           <nuxt-link :class="song.youtubeID ? 'p-bottom' : null" :to="'/videos/' + song.id">
             {{ song.title }}
@@ -14,7 +14,7 @@
         </li>
       </ul>
       <ul class="songs-list col-md-6">
-        <h2>Covers</h2>
+        <h2 class="text-center">Covers</h2>
         <li v-for="song in songs.cover" :key=song.id>
           <nuxt-link :class="song.youtubeID ? 'p-bottom' : null" :to="'/videos/' + song.id"> {{ song.title }}
             <img :src="'https://img.youtube.com/vi/' + song.youtubeID + '/hqdefault.jpg'" alt="VID"
@@ -44,15 +44,6 @@ export default {
       cover: true
     };
   },
-  methods: {
-    // toggleCategory: function (song) {
-    //   return {
-    //     hidden: !this[song.type],
-    //     cover: song.type === 'cover',
-    //     ownWork: song.type === 'ownWork',
-    //   };
-    // }
-  },
   computed: {
     songs() {
       return this.$store.state.songs;
@@ -60,10 +51,6 @@ export default {
   },
   mounted: function () {
     this.$route.fullPath !== "/" ? (this.small = true) : (this.small = false);
-    this.$nextTick(function () {
-      // Code that will run only after the
-      // entire view has been rendered
-    });
   },
   watch: {
     $route(to, from) {
@@ -74,6 +61,12 @@ export default {
 </script>
 <style lang="scss">
 .songs-list {
+  list-style: none;
+
+  h2 {
+    font-weight: bolder;
+  }
+
   a {
     display: flex;
     flex-direction: column;
