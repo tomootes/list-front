@@ -42,3 +42,8 @@ https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment/
 ❗ Incorrect Target
 
 $ yarn why vue
+
+## Build and serve the app
+
+$ npm run build
+$ pm2 start
