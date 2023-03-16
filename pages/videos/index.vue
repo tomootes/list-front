@@ -9,7 +9,7 @@ import list from '~/components/list.vue'
 export default {
     head() {
         return {
-            title: 'Videos ~ Ootes Band'
+            title: 'Videos ~ Ootes'
         };
     },
     components: {

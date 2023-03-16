@@ -13,13 +13,9 @@
       <div class="page-footer">
 
         <div class="page-footer__follow">
-          <a target="_blank" href="https://www.instagram.com/ootes.band/">Volg ons: <img
-              src="~/assets/img/instagram.svg" alt=""></a>
+          <a target="_blank" href="https://www.instagram.com/ootes.band/">Volg ons: <img src="~/assets/img/camera.svg"
+              alt=""></a>
         </div>
-        <!-- <div class="page-footer__under-construction">
-          <img src="~/assets/img/under-construction.svg" alt="">
-          <p>Deze website is in aanbouw!~</p>
-        </div> -->
       </div>
     </div>
   </div>
@@ -86,7 +82,7 @@ body {
   margin-bottom: 6rem;
 
   img {
-    width: 40px;
+    width: 160px;
   }
 
   &__under-construction {

@@ -27,7 +27,7 @@ import logo from '~/components/logo.vue'
 export default {
   head() {
     return {
-      title: 'Gigs ~ Ootes Band'
+      title: 'Gigs ~ Ootes'
     };
   },
   components: {

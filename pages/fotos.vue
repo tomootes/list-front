@@ -19,7 +19,7 @@ import logo from '~/components/logo.vue'
 export default {
     head() {
         return {
-            title: 'Fotos ~ Ootes Band'
+            title: 'Fotos ~ Ootes'
         };
     },
     data() {

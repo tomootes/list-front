@@ -9,16 +9,24 @@
       </div>
       <div class="home__content">
         <h1 class="page__title mt-3">Over Ootes</h1>
-        <p class="page__paragraph-highlighted">Dit Utrechtse Duo vaart voort op de grote levensvragen van vandaag;
-          hoe kunnen wij als mensen in symbiose leven met onze Aarde? Hoe en waar kunnen we elkaar vinden? </p>
-        <p class="page__paragraph-highlighted">Met nog tien jaar om onze levenswijze collectief om te gooien vragen wij
-          ons af, hoe kunnen we regeneratieve rituelen ontwikkelen voor een leefbare toekomst?
-          Verwikkeld met technologieën maar geinspireerd door de natuur, vinden wij in muziek ons medium om in relatie
-          te treden met de wereld om ons heen.
-          Avonturen door de wildernis van Schotland en Noorwegen vinden hun weg naar gevonden zinnen en nieuwe beginnen
-          in de songteksten van Tom.</p>
-        <p class="page__paragraph-highlighted">Een durf om innerlijke zoektochten naar liefde en melancholie naar buiten
-          te brengen, levenskunst te beoefenen op onze stervende aarde, in de hoop om het tij op tijd te laten keren...
+        <div class="page__paragraph-highlighted">
+          <p>Dit Utrechtse Duo vaart voort op de grote levensvragen van vandaag;
+            hoe kunnen wij als mensen in symbiose leven met onze Aarde? Hoe en waar kunnen we elkaar vinden?</p>
+          <p>We hebben nog maar tien jaar om onze manier van leven om te gooien. Hoe
+            kunnen we nieuwe rituelen en gewoontes ontwikkelen voor een leefbare toekomst?
+            Verstrikt geraakt in technologieën maar geinspireerd door de natuur, zien we onszelf doormodderen. </p>
+          <p>
+            In muziek vinden we een manier om onszelf uit te drukken. Onze liedjes reflecteren onze grote vragen
+            maar krijgen vorm middels alledaagse verhalen.</p>
+          <p>
+            Avonturen door de wildernis van Schotland en Noorwegen klinken door in de songteksten van Tom.</p>
+          <p>Een durf om innerlijke zoektochten naar liefde en melancholie naar buiten
+            te brengen, levenskunst te beoefenen op onze stervende aarde, in de hoop om het tij op tijd te laten keren...
+          </p>
+        </div>
+        <p class="page__paragraph-highlighted">
+          <b>Tom Ootes</b> - tekst / zang / gitaar <br />
+          <b>Huib Pruymboom</b> - drums
         </p>
       </div>
     </div>
@@ -31,13 +39,12 @@ import logo from '~/components/logo.vue'
 export default {
   head() {
     return {
-      title: 'Homepage ~ Ootes Band'
+      title: 'Homepage ~ Ootes'
     };
   },
   components: {
     logo
   },
-
 }
 </script>
 <style scoped lang="scss">
@@ -69,8 +76,6 @@ export default {
 }
 
 .home__content {
-
-
   @media (min-width: $breakpoint-md) {
     padding: 2rem 5rem;
     position: absolute;

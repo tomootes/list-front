@@ -47,3 +47,7 @@ $ yarn why vue
 
 $ npm run build
 $ pm2 start
+
+# INIT PM2
+
+pm2 start ecosystem.config.js
