@@ -1,0 +1,25 @@
+@use '../variables';
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    @media (min-width: $breakpoint-sm) {
+        max-width: 1024px;
+    }
+
+    &--md{
+        @media (min-width: $breakpoint-sm) {
+            max-width: variables.$container-md;
+        }
+    }
+
+    &--lg{   
+        @media (min-width: $breakpoint-sm) {
+            max-width: variables.$container-lg;
+        }
+    }
+    
+
+}

@@ -1,16 +1,20 @@
 <template>
-    <div class="row">
-        <a class="col-md-6 photo" v-for="photo in bandphotos" :href="'https://ucarecdn.com/' + photo + '/'"
-            target="_blank">
-            <img :src="'https://ucarecdn.com/' + photo + '/-/scale_crop/1000x1000/smart/'" class="img-fluid"
-                alt="photo">
-        </a>
-        <h1 class="mt-4">Le Guess Who U? </h1>
-        <a class="col-md-6 photo" v-for="photo in gigphotos" :href="'https://ucarecdn.com/' + photo + '/'"
-            target="_blank">
-            <img :src="'https://ucarecdn.com/' + photo + '/-/scale_crop/1000x1000/smart/'" class="img-fluid"
-                alt="photo">
-        </a>
+    <div>
+        <div class="photos">
+            <a class="col-md-6 photo" v-for="photo in bandphotos" :href="'https://ucarecdn.com/' + photo + '/'"
+                target="_blank">
+                <img :src="'https://ucarecdn.com/' + photo + '/-/scale_crop/1000x1000/smart/'" class="img-fluid"
+                    alt="photo">
+            </a>
+        </div>
+        <div class="photos">
+            <h1 class="mt-4">Le Guess Who U? </h1>
+            <a class="col-md-6 photo" v-for="photo in gigphotos" :href="'https://ucarecdn.com/' + photo + '/'"
+                target="_blank">
+                <img :src="'https://ucarecdn.com/' + photo + '/-/scale_crop/1000x1000/smart/'" class="img-fluid"
+                    alt="photo">
+            </a>
+        </div>
     </div>
 </template>
 <script>
@@ -70,11 +74,21 @@ table {
 }
 </style>
 <style scoped lang="scss">
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $spacing05;
+}
+
 .photo {
-    margin-bottom: .75rem;
+    // margin-bottom: $spacing05;
+
+    img {
+        max-width: 100%;
+    }
 
     @media (min-width: $breakpoint-sm) {
-        margin-bottom: 24px;
+        // margin-bottom: $spacing05;
     }
 }
 </style>

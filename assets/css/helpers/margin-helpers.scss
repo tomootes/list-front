@@ -1,0 +1,57 @@
+@use "../variables";
+
+@use "mixins";
+
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-sm {
+    @include mixins.margin-top-sm-responsive;
+}
+
+.mt-md {
+    @include mixins.margin-top-md-responsive;
+}
+
+.mt-lg {
+    @include mixins.margin-top-lg-responsive;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-sm {
+    @include mixins.margin-bottom-sm-responsive;
+}
+
+.mb-md {
+    @include mixins.margin-bottom-md-responsive;
+}
+
+.mb-lg {
+    @include mixins.margin-bottom-lg-responsive;
+}
+
+.mb-9000 {
+    margin-bottom: 20rem;
+}
+
+/* MARGIN Y AXIS SPACERS
+    - "my" stands for: margin on the Y axis
+    - gives an element a certain spacing on TOP and BOTTOM (y-axis)
+*/
+
+.my-sm {
+    @include mixins.margin-y-sm-responsive;
+}
+
+.my-md {
+    @include mixins.margin-y-md-responsive;
+}
+
+.my-lg {
+    @include mixins.margin-y-lg-responsive;
+}

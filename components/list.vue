@@ -1,31 +1,24 @@
 <template>
-  <div class="">
-    <div class="row">
-      <!-- {{ songs }} -->
-      <ul class="songs-list col-md-6">
-        <h2 class="text-center">Eigen werk</h2>
-        <li v-for="song in songs.ownWork" :key=song.id>
-          <nuxt-link :class="song.youtubeID ? 'p-bottom' : null" :to="'/videos/' + song.id">
-            {{ song.title }}
-            <img :src="'https://img.youtube.com/vi/' + song.youtubeID + '/hqdefault.jpg'" alt="VID"
-              v-if="song.youtubeID">
-            <!-- <img :src="`http://37.139.26.166:1337/${song.banner.url}`" alt="" v-else> -->
-          </nuxt-link>
-        </li>
-      </ul>
-      <ul class="songs-list col-md-6">
-        <h2 class="text-center">Covers</h2>
-        <li v-for="song in songs.cover" :key=song.id>
-          <nuxt-link :class="song.youtubeID ? 'p-bottom' : null" :to="'/videos/' + song.id"> {{ song.title }}
-            <img :src="'https://img.youtube.com/vi/' + song.youtubeID + '/hqdefault.jpg'" alt="VID"
-              v-if="song.youtubeID">
-          </nuxt-link>
-        </li>
-      </ul>
-
-    </div>
+  <div class="video-list-container">
+    <ul class="songs-list list-reset col-md-6">
+      <h2 class="text-center sticky-header">Eigen werk</h2>
+      <li v-for="song in songs.ownWork" :key=song.id>
+        <nuxt-link :class="song.youtubeID ? 'p-bottom' : null" :to="'/videos/' + song.id">
+          {{ song.title }}
+          <img :src="'https://img.youtube.com/vi/' + song.youtubeID + '/hqdefault.jpg'" alt="VID" v-if="song.youtubeID">
+          <!-- <img :src="`http://37.139.26.166:1337/${song.banner.url}`" alt="" v-else> -->
+        </nuxt-link>
+      </li>
+    </ul>
+    <ul class="songs-list list-reset col-md-6">
+      <h2 class="text-center sticky-header">Covers</h2>
+      <li v-for="song in songs.cover" :key=song.id>
+        <nuxt-link :class="song.youtubeID ? 'p-bottom' : null" :to="'/videos/' + song.id"> {{ song.title }}
+          <img :src="'https://img.youtube.com/vi/' + song.youtubeID + '/hqdefault.jpg'" alt="VID" v-if="song.youtubeID">
+        </nuxt-link>
+      </li>
+    </ul>
   </div>
-
 </template>
 <script>
 import logo from "~/components/logo.vue";
@@ -60,6 +53,28 @@ export default {
 };
 </script>
 <style lang="scss">
+.sticky-header {
+  position: -webkit-sticky;
+  /* Safari & IE */
+  position: sticky;
+  top: 0;
+  background-color: $purple;
+  color: white;
+  padding: $spacing03;
+}
+
+.video-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
 .songs-list {
   list-style: none;
 

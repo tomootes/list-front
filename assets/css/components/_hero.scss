@@ -1,0 +1,22 @@
+.hero{
+    position: relative;
+    margin-bottom: $gutter-sm;
+    &__overlay-text{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        color: white;
+        margin-top: 0;
+        font-size: 2.5rem;
+    }
+    img {
+        max-width: 100%;
+    }
+
+    .photo--rotate{
+        display: flex;
+        perspective: 1000px;  
+        transform-style: preserve-3d;	
+
+    }
+}

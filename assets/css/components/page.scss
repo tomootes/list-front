@@ -1,6 +1,9 @@
 .page{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .bijzonder{
         padding: 1rem;
         background-color: $yellow;
@@ -25,8 +28,26 @@
         
           @media (min-width: $breakpoint-sm) {
             background: rgba(255,255,255,1);
-            margin-left: -0.5rem;
+            // margin-left: -0.5rem;
             padding: 0.5rem;
           }
       }
+}
+
+.page-content{
+
+  width: 100%;
+  margin: 0 auto;
+
+  // @media (min-width: $breakpoint-sm) {
+  //   width: 800;
+  // }
+
+  // @media (min-width: $breakpoint-md) {
+  //   width: 1400px;
+  // }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 1400px;
+  }
 }

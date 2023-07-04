@@ -1,8 +1,12 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-
 @import 'variables';
 @import 'colors';
 
+@import "helpers/margin-helpers";
+@import "helpers/reset";    
+
+@import "components/btn";
+@import "components/container";
+@import "components/hero";
 @import 'components/list';
 @import 'components/list-filter';
 @import 'components/page';
@@ -19,7 +23,6 @@ body, html{
     padding: 0;
     font-family: 'Fira Mono', monospace;
 }
-
 
 a {
     color: $blue;

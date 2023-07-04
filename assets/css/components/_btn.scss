@@ -1,0 +1,9 @@
+@use "../colors.scss";
+
+.btn{
+    padding: 2rem;
+    background-color: colors.$nineties-kikker;
+    border-radius: 15px;
+    border: 1rem solid white;
+    font-weight: bolder;
+}

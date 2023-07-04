@@ -1,0 +1,82 @@
+// Margin bottom mixins
+@use "../variables";
+
+@mixin margin-bottom-sm-responsive {
+    margin-bottom: variables.$spacing04;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-bottom: variables.$spacing05;
+    }
+}
+
+@mixin margin-bottom-md-responsive {
+    margin-bottom: variables.$spacing05;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-bottom: variables.$spacing06;
+    }
+}
+
+@mixin margin-bottom-lg-responsive {
+    margin-bottom: variables.$spacing07;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-bottom: variables.$spacing09;
+    }
+}
+
+// Margin top mixins
+@mixin margin-top-sm-responsive {
+    margin-top: variables.$spacing04;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-top: variables.$spacing05;
+    }
+}
+
+@mixin margin-top-md-responsive {
+    margin-top: variables.$spacing05;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-top: variables.$spacing06;
+    }
+}
+
+@mixin margin-top-lg-responsive {
+    margin-top: variables.$spacing07;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-top: variables.$spacing09;
+    }
+}
+
+// Margin top and bottom (Y axis) mixins
+@mixin margin-y-sm-responsive {
+    margin-top: variables.$spacing04;
+    margin-bottom: variables.$spacing04;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-top: variables.$spacing05;
+        margin-bottom: variables.$spacing05;
+    }
+}
+
+@mixin margin-y-md-responsive {
+    margin-top: variables.$spacing05;
+    margin-bottom: variables.$spacing05;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-top: variables.$spacing06;
+        margin-bottom: variables.$spacing06;
+    }
+}
+
+@mixin margin-y-lg-responsive {
+    margin-top: variables.$spacing07;
+    margin-bottom: variables.$spacing07;
+
+    @media only screen and (min-width: variables.$breakpoint-sm) {
+        margin-top: variables.$spacing09;
+        margin-bottom: variables.$spacing09;
+    }
+}
